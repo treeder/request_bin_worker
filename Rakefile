@@ -4,8 +4,8 @@ require 'jeweler2'
 
 Jeweler::Tasks.new do |gemspec|
   gemspec.name = "request_bin_worker"
-  gemspec.summary = "A worker that will run a Github Gist on on IronWorker http://www.iron.io"
-  gemspec.description = "A worker that will run a Github Gist on on IronWorker http://www.iron.io"
+  gemspec.summary = "A worker that will post to requstb.in via IronWorker http://www.iron.io"
+  gemspec.description = "A worker that will post to requstb.in via IronWorker http://www.iron.io"
   gemspec.email = "travis@iron.io"
   gemspec.homepage = "https://github.com/treeder/request_bin_worker"
   gemspec.authors = ["Travis Reeder"]
