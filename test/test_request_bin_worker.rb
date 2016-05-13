@@ -1,14 +1,10 @@
 require 'yaml'
 require 'iron_worker'
 
-@config = YAML::load_file(File.expand_path(File.join("~", "Dropbox", "configs", "gist_worker", "test", "config.yml")))
-IronWorker.configure do |config|
-  config.token = @config['iron']['token']
-  config.project_id = @config['iron']['project_id']
-end
-
 require_relative '../lib/request_bin_worker'
 #require 'request_bin_worker'
+
+RequestBinWorker::Worker.setup # can avoid this with the same behaviour as old one - store checksum
 
 worker = RequestBinWorker::Worker.new
 worker.bin_url = "http://requestb.in/1hklas01"
